@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<bean id="triangle" class="com.saurabh.Triangle" init-method="myInIt" destroy-method="myDestory" >
+
+	<property name="type" value="Equilateral"></property>
+	<property name="pointA" ref="PointA" />
+	<property name="pointB" ref="PointB" />
+	<property name="pointC" ref="PointC" />
+</bean>
+
+<bean id="PointA" class="com.saurabh.Point">
+<property name="X" value="0"/>
+<property name="Y" value="0"/>
+</bean>
+
+<bean id="PointB" class="com.saurabh.Point">
+<property name="X" value="0"/>
+<property name="Y" value="20"/>
+</bean>
+
+
+<bean id="PointC" class="com.saurabh.Point">
+<property name="X" value="-20"/>
+<property name="Y" value="0"/>
+</bean>
+
+</beans>
